@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.svelte';
+import Hero from '../components/Hero.svelte';
+import About from '../components/About.svelte';
+import ProblemCards from '../components/ProblemCards.svelte';
+import Services from '../components/Services.svelte';
+import Projects from '../components/Projects.svelte';
+import TechStack from '../components/TechStack.svelte';
+import Experience from '../components/Experience.svelte';
+import Contact from '../components/Contact.svelte';
+import Footer from '../components/Footer.svelte';
+---
+
+<BaseLayout>
+  <Header client:load />
+
+  <main>
+    <section id="inicio">
+      <Hero client:load />
+    </section>
+
+    <section id="sobre">
+      <About client:load />
+    </section>
+
+    <section id="problemas">
+      <ProblemCards client:load />
+    </section>
+
+    <section id="servicos">
+      <Services client:load />
+    </section>
+
+    <section id="projetos">
+      <Projects client:load />
+    </section>
+
+    <section id="tecnologias">
+      <TechStack client:load />
+    </section>
+
+    <section id="experiencia">
+      <Experience client:load />
+    </section>
+
+    <section id="contato">
+      <Contact client:load />
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
