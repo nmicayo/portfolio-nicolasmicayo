@@ -21,7 +21,9 @@
     mono = true,
   }: Props = $props();
 
-  const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&';
+  const CHARS_MONO = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&';
+  const CHARS_PROP = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const CHARS = mono ? CHARS_MONO : CHARS_PROP;
 
   let displayed = $state(phrases[0] ?? '');
   let isScrambling = $state(false);
@@ -86,7 +88,7 @@
 </script>
 
 <span
-  class="{mono ? 'font-mono font-semibold tracking-wide' : ''} select-none {className}"
+  class="{mono ? 'font-mono font-semibold tracking-wide' : ''} select-none whitespace-nowrap {className}"
   style="
     color: {isScrambling ? scramblingColor : resolvedColor};
     text-shadow: {isScrambling ? `0 0 12px ${scramblingColor}88` : `0 0 8px ${resolvedColor}44`};
