@@ -18,11 +18,15 @@ export function reveal(node: Element, options: RevealOptions = {}) {
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        // getBoundingClientRect force-flushes layout before animating
         el.getBoundingClientRect();
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
         observer.disconnect();
+        const totalMs = (delay + duration) * 1000;
+        setTimeout(() => {
+          el.style.transform = '';
+          el.style.transition = '';
+        }, totalMs);
       }
     },
     { threshold: 0.05 }

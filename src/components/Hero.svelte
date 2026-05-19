@@ -29,7 +29,7 @@
       </span>
 
       <div class="flex flex-col gap-1">
-        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight overflow-hidden">
           <ScrambleRotate
             phrases={['Nicolas Botelho']}
             interval={5000}
