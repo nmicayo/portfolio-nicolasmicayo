@@ -86,7 +86,7 @@
 </script>
 
 <span
-  class="{mono ? 'font-mono' : ''} font-semibold tracking-wide select-none {className}"
+  class="{mono ? 'font-mono font-semibold tracking-wide' : ''} select-none {className}"
   style="
     color: {isScrambling ? scramblingColor : resolvedColor};
     text-shadow: {isScrambling ? `0 0 12px ${scramblingColor}88` : `0 0 8px ${resolvedColor}44`};
