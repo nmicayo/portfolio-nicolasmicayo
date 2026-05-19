@@ -29,8 +29,16 @@
       </span>
 
       <div class="flex flex-col gap-1">
-        <h1 class="text-5xl lg:text-6xl font-extrabold text-[#F8FAFC] leading-tight">
-          Nicolas Botelho
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+          <ScrambleRotate
+            phrases={['Nicolas Botelho']}
+            interval={3500}
+            speed={25}
+            mono={false}
+            resolvedColor="#F8FAFC"
+            scramblingColor="#00D4A8"
+            class="text-5xl lg:text-6xl font-extrabold"
+          />
         </h1>
         <p class="mt-1">
           <ScrambleRotate phrases={scramblePhrases} />

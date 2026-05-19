@@ -3,11 +3,23 @@
 
   interface Props {
     phrases: string[];
-    interval?: number; // ms entre trocas
-    speed?: number;    // ms por frame do scramble
+    interval?: number;
+    speed?: number;
+    class?: string;
+    resolvedColor?: string;
+    scramblingColor?: string;
+    mono?: boolean;
   }
 
-  let { phrases, interval = 2800, speed = 30 }: Props = $props();
+  let {
+    phrases,
+    interval = 2800,
+    speed = 30,
+    class: className = '',
+    resolvedColor = '#00D4A8',
+    scramblingColor = '#89FF69',
+    mono = true,
+  }: Props = $props();
 
   const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&';
 
@@ -74,10 +86,11 @@
 </script>
 
 <span
-  class="font-mono font-semibold text-base tracking-wide select-none"
-  class:text-[#00D4A8]={!isScrambling}
-  class:text-[#89FF69]={isScrambling}
-  style="text-shadow: {isScrambling ? '0 0 12px #89FF6988' : '0 0 8px #00D4A844'};"
+  class="{mono ? 'font-mono' : ''} font-semibold tracking-wide select-none {className}"
+  style="
+    color: {isScrambling ? scramblingColor : resolvedColor};
+    text-shadow: {isScrambling ? `0 0 12px ${scramblingColor}88` : `0 0 8px ${resolvedColor}44`};
+  "
 >
   {displayed}
 </span>
