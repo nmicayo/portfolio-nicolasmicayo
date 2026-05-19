@@ -45,7 +45,7 @@
         interval={1500}
         speed={20}
         resolvedColor="#00D4A8"
-        scramblingColor="#89FF69"
+        scramblingColor="#F8FAFC"
       />
     </a>
 
