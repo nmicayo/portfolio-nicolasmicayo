@@ -33,7 +33,7 @@
           <span class="text-[#00D4A8] text-5xl lg:text-6xl select-none">$</span>
           <ScrambleRotate
             phrases={['nicolas.botelho']}
-            interval={3500}
+            interval={5000}
             speed={25}
             resolvedColor="#F8FAFC"
             scramblingColor="#00D4A8"

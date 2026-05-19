@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Menu, X } from 'lucide-svelte';
+  import ScrambleRotate from './ScrambleRotate.svelte';
 
   let menuOpen = $state(false);
   let activeSection = $state('inicio');
@@ -37,8 +38,15 @@
   <div class="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="#inicio" class="font-bold text-lg text-[#00D4A8] font-['Inter']">
-      Nicolas Botelho
+    <a href="#inicio" class="flex items-center gap-2 font-mono font-bold text-lg">
+      <span class="text-[#00D4A8] select-none">$</span>
+      <ScrambleRotate
+        phrases={['nicolas.botelho']}
+        interval={1500}
+        speed={20}
+        resolvedColor="#00D4A8"
+        scramblingColor="#89FF69"
+      />
     </a>
 
     <!-- Nav desktop -->
