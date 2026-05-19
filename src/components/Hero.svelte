@@ -29,15 +29,15 @@
       </span>
 
       <div class="flex flex-col gap-1">
-        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+        <h1 class="flex items-center gap-3 font-mono font-bold leading-tight">
+          <span class="text-[#00D4A8] text-5xl lg:text-6xl select-none">$</span>
           <ScrambleRotate
-            phrases={['Nicolas Botelho']}
+            phrases={['nicolas.botelho']}
             interval={3500}
             speed={25}
-            mono={false}
             resolvedColor="#F8FAFC"
             scramblingColor="#00D4A8"
-            class="text-5xl lg:text-6xl font-extrabold"
+            class="text-5xl lg:text-6xl font-bold"
           />
         </h1>
         <p class="mt-1">
